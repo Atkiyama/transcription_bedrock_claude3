@@ -1,6 +1,3 @@
-Cython 
-moviepy
-ReazonSpeech/pkg/nemo-asr
 streamlit
 reazonspeech
 boto3
