@@ -10,6 +10,7 @@ RUN apt-get update && apt-get install -y \
     python3-pip \
     ffmpeg \
     tzdata \
+    git \
     && apt-get clean
 
 # 作業ディレクトリを作成
@@ -20,14 +21,9 @@ COPY requirements.txt requirements.txt
 COPY app.py app.py
 COPY .env .env
 
-# Cythonとmoviepyをインストール
-RUN pip install Cython moviepy
 
 # ReazonSpeechリポジトリをクローン
 RUN git clone https://github.com/reazon-research/ReazonSpeech
-
-# ReazonSpeechのnemo-asrパッケージをインストール
-RUN pip install ReazonSpeech/pkg/nemo-asr
 
 # 必要なPythonパッケージをインストール
 RUN pip3 install --no-cache-dir -r requirements.txt
