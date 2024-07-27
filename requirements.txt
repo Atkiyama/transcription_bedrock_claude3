@@ -1,0 +1,5 @@
+streamlit
+reazonspeech
+moviepy
+boto3
+python-dotenv
