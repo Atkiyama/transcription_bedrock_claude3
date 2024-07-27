@@ -1,8 +1,3 @@
-以下に、プロジェクトの使用方法を説明する README ファイルの内容を示します。
-
-### README.md
-
-````markdown
 # Streamlit 会議要約アプリ
 
 このプロジェクトは、会議の動画をアップロードし、音声を文字起こしし、要約を生成する Streamlit アプリケーションです。音声認識には`reazonspeech`ライブラリを使用し、要約生成には Amazon Bedrock の`anthropic.claude-3-sonnet-20240229-v1:0:200k`モデルを使用しています。
@@ -151,7 +146,6 @@
 ```sh
 docker build -t streamlit-app .
 ```
-````
 
 ### Docker コンテナの実行
 
@@ -170,13 +164,4 @@ AWS の認証情報を`.env`ファイルに設定することで、アプリケ�
 ```dotenv
 AWS_ACCESS_KEY_ID=your_access_key_id
 AWS_SECRET_ACCESS_KEY=your_secret_access_key
-```
-
-## ライセンス
-
-このプロジェクトは MIT ライセンスの下でライセンスされています。詳細については LICENSE ファイルを参照してください。
-
-```
-
-このREADMEファイルは、プロジェクトのセットアップ手順、必要なファイル、Dockerイメージのビルドと実行方法について詳しく説明しています。これにより、他の開発者がプロジェクトを簡単にセットアップし、使用することができます。
 ```
